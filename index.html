@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="./js/util.js"></script>
+        <title>Sorting Visualizer</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html" id="logo">Sorting Visualizer</a>
+                </li>
+                <li><a href="./index.html" class="active">Bubble Sort</a></li>
+                <li><a href="./insertionSort.html">Insertion Sort</a></li>
+                <li><a href="./selectionSort.html">Selection Sort</a></li>
+                <li><a href="./quickSort.html">Quick Sort</a></li>
+                <li><a href="./mergeSort.html">Merge Sort</a></li>
+            </ul>
+        </nav>
+
+        <div class="gridContainer">
+            <div class="leftContainer">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>Array Length :- Changes number of bars (default = 10)</li>
+                    <li>Speed :- Changes speed of animations</li>
+                    <li>Shuffle :- Randomizes the bars</li>
+                    <li>Sort :- Sorts the bars in ascending order</li>
+                </ul>
+                <h3>Controls</h3>
+                <div class="container">
+                    <div>
+                        <label for="arrayLength">Array Length</label>
+                        <input
+                            type="range"
+                            name="arrayLength"
+                            id="arrayLength"
+                            min="10"
+                            max="50"
+                            value="10"
+                            oninput="onLengthChange(this.value)"
+                            onchange="onLengthChange(this.value)"
+                        />
+                    </div>
+                    <div>
+                        <label for="speed">Speed</label>
+                        <input type="range" name="speed" id="speed" min="-2" max="2" value="0" onchange="onSpeedChange(this.value)" />
+                    </div>
+                    <button onclick="shuffleArray()">Shuffle</button>
+                    <button id="sort">Sort</button>
+                </div>
+            </div>
+            <div class="rightContainer">
+                <div id="linesContainer"></div>
+            </div>
+        </div>
+        <div id="theme-container">
+            Themes :
+            <span id="yellow" class="theme-selector" onclick="setYellowTheme()"></span>
+            <span id="red" class="theme-selector" onclick="setRedTheme()"></span>
+            <span id="green" class="theme-selector" onclick="setGreenTheme()"></span>
+        </div>
+        <script src="./js/bubble-sort.js"></script>
+    </body>
+</html>

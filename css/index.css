@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: rgb(34, 34, 34);
+    --text-color: #fff;
+    --primary-color: #c43636;
+    --font-size: 20px;
+}
+.theme-yellow {
+    --primary-color: #d4a933;
+}
+.theme-red {
+    --primary-color: #c43636;
+}
+.theme-green {
+    --primary-color: rgb(87, 173, 0);
+}
+.theme-selector {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#theme-container {
+    position: absolute;
+    right: 40px;
+    margin-top: 40px;
+}
+#yellow {
+    background-color: #d4a933;
+}
+#red {
+    background-color: #c43636;
+}
+#green {
+    background-color: rgb(87, 173, 0);
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+}
+nav > ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 20px 0;
+    /* border: 1px solid red; */
+}
+nav > ul > li {
+    float: left;
+}
+#logo {
+    font-size: 2rem;
+    padding: 10px 20px;
+}
+li > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem 20px;
+}
+nav > ul > li:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+.active {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+}
+.gridContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.leftContainer {
+    padding: 10%;
+    border-radius: 10px;
+    box-shadow: -2px 5px 10px 0 var(--primary-color);
+}
+.leftContainer > ul {
+    list-style-type: disc;
+}
+.leftContainer > ul > li {
+    color: rgb(184, 184, 184);
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+h3 {
+    margin: 15px 0;
+}
+#linesContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 500px;
+    padding: 20px;
+}
+#linesContainer > div {
+    border-right: 20px solid var(--primary-color);
+    margin-right: 5px;
+    transition: height border 2s;
+}
+button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    box-shadow: 0px 5px 10px 0px var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}

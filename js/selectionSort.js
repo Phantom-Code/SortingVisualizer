@@ -4,10 +4,7 @@ let linesContainer = document.getElementById("linesContainer");
 let len = parseInt(document.getElementById("arrayLength").value);
 let speed = parseInt(document.getElementById("speed").value) + 100;
 let sortBtn = document.getElementById("sort");
-
 selectionSort = (array) => {
-    let color = document.querySelector(":root");
-    color = getComputedStyle(color).getPropertyValue("--primary-color");
     for (let i = 0; i < array.length - 1; i++) {
         for (let j = i + 1; j < array.length; j++) {
             if (array[i] > array[j]) {
@@ -22,6 +19,8 @@ selectionSort = (array) => {
     drawAnimations(arrayStates);
 };
 drawAnimations = (array) => {
+    let color = document.querySelector(":root");
+    color = getComputedStyle(color).getPropertyValue("--primary-color");
     for (let i = 0; i < array.arr.length; i++) {
         setTimeout(() => {
             for (let j = 0; j < array.arr[i].length; j++) {

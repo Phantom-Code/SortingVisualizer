@@ -4,7 +4,6 @@ let linesContainer = document.getElementById("linesContainer");
 let len = parseInt(document.getElementById("arrayLength").value);
 let speed = parseInt(document.getElementById("speed").value) + 100;
 let sortBtn = document.getElementById("sort");
-
 drawAnimations = (array) => {
     let color = document.querySelector(":root");
     color = getComputedStyle(color).getPropertyValue("--primary-color");

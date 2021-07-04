@@ -13,12 +13,24 @@ drawLines = (array) => {
 onSpeedChange = (val) => {
     speed = -(val * 50) + 101;
 };
+setTheme = (themeName) => {
+    localStorage.setItem("theme", themeName);
+    document.documentElement.className = themeName;
+};
 setYellowTheme = () => {
-    document.documentElement.className = "theme-yellow";
+    setTheme("theme-yellow");
 };
 setRedTheme = () => {
-    document.documentElement.className = "theme-red";
+    setTheme("theme-red");
 };
 setGreenTheme = () => {
-    document.documentElement.className = "theme-green";
+    setTheme("theme-green");
 };
+(() => {
+    console.log(localStorage.getItem("theme"));
+    if (localStorage.getItem("theme")) {
+        setTheme(localStorage.getItem("theme"));
+    } else {
+        setTheme("theme-red");
+    }
+})();
